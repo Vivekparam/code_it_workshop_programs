@@ -1,0 +1,85 @@
+/**
+ *COPY THIS FILE BEFORE EDITING IT 
+ **/
+
+// go to table_northeast
+robot.goTo("table_northeast");   // other places: door,  home, trash, couch_west, vivek_desk,
+							// table_northwest, table_northeast, table_southwest, table_southeast
+
+// display message
+robot.displayMessage('Hello!', 'My Name is Hal 9000. Don\'t worry, I won\'t kill you.');
+
+// say message
+robot.say("Hello, my name is Hal 9000. Don't worry, I won't kill you.");
+
+// wait for two seconds
+waitForDuration(2);
+
+// display message
+robot.displayMessage('Yet.');
+
+// say message
+robot.say("Yet.");
+
+// wait for two seconds
+waitForDuration(2);
+
+// say message
+robot.say("What's your favorite binary number?");
+
+// Ask a question
+item = robot.askMultipleChoice('What\'s your favorite binary number?', ['Zero', 'One']);
+
+// Display a message by adding two strings together
+robot.displayMessage(String('You Selected ') + String(item));
+
+// say message
+robot.say(String('You Selected ') + String(item));
+
+// wait for one second
+waitForDuration(1);
+
+// Display a message
+robot.displayMessage('I like the other number better!');
+
+// say message
+robot.say("I like the other number better!");
+
+// wait for two second
+waitForDuration(2);
+
+// Display a message
+robot.displayMessage('Because you chose the wrong number.', 'You will have three days left to live.');
+
+// say message
+robot.say("Because you chose the wrong number. You will have three days left to live.");
+
+// wait for one second
+waitForDuration(1);
+
+// Display a message
+robot.displayMessage('Bye!');
+
+// say message
+robot.say("Bye!");
+
+// Go back to Vivek's Desk
+robot.goTo("vivek_desk");
+
+// Display a message
+robot.displayMessage('Oops, wrong place');
+
+// say message
+robot.say("Oops, wrong place.");
+
+// Go back to home
+robot.goTo("home");
+
+
+
+
+
+
+
+
+

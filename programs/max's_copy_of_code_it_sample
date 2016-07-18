@@ -1,0 +1,61 @@
+/**
+ *COPY THIS FILE BEFORE EDITING IT 
+ **/
+
+// go to couch_east
+robot.goTo("table_northeast");   // other places: door,  home, trash, couch_west, vivek_desk,
+							// table_northwest, table_northeast, table_southwest, table_southeast
+
+// display message
+robot.displayMessage('Hvordan har du det?', 'Jeg heter LoggerHead.');
+
+// say message
+robot.say("How are you?");
+waitForDuration(1);
+robot.say("My name is Loggerhead");
+
+// wait for two seconds
+waitForDuration(2);
+
+robot.displayMessage('Jeg skriver i Norsk og snakker i Engelsk!');
+robot.say("I display in Norwegian, and speak in English");
+waitForDuration(1);
+robot.displayMessage('Jeg er ment å være en lærer');
+robot.say("I am meant to be a teacher"); 
+waitForDuration(2); //WAIT 2 SECONDS
+robot.displayMessage('Hva');
+robot.say("Vaa means what");
+waitforDuration(6);
+
+// say message
+robot.say("What does vaa mean?");
+
+// Ask a question
+item = robot.askMultipleChoice('What does Hva mean?', ['What', 'When']);
+
+// Display a message by adding two strings together
+robot.displayMessage(String('You Selected ') + String(item));
+
+// say message
+robot.say(String('You Selected ') + String(item));
+
+// wait for one second
+waitForDuration(2);
+
+// Display a message
+robot.displayMessage("Ha det bra!");
+
+// say message
+robot.say("Goodbye!");
+waitForDuration(1);
+// Go back to home
+robot.goTo("home");
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+//say This is a test to see if it can say special characters
+robot.say("værer rød grød med fløde");

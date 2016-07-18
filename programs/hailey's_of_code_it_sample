@@ -1,0 +1,58 @@
+/**
+ *COPY THIS FILE BEFORE EDITING IT 
+ **/
+
+// go to couch_east
+robot.goTo("table_northeast");   // other places: door,  home, trash, couch_west, vivek_desk,
+							// table_northwest, table_northeast, table_southwest, table_southeast
+
+// display message
+robot.displayMessage('Hello!', 'My Name is LoggerHead.I like to meet new people.');
+
+// say message
+robot.say("Hello, my name is Loggerhead. I like to meet new people.");
+
+// wait for two seconds
+waitForDuration(2);
+
+// say message
+robot.say("What's your favorite color? Mine is green.");
+
+// Ask a question
+item = robot.askMultipleChoice('What's your favorite color? Mine is green.', ['pink', 'blue','red','green']);
+
+// Display a message by adding two strings together
+robot.displayMessage(String('You Selected ') + String(item));
+
+// say message
+robot.say(String('You Selected ') + String(item));
+
+// wait for one second
+waitForDuration(2)
+
+// Display a message by adding two strings together
+robot.displayMessage(String("I hope you have a great and wonderful time at Do-It")
+
+// say message
+robot.say("i hope you have a great and wonderful time at Do-It")
+
+// wait for one second
+waitForDuration(2)
+
+// Display a message
+robot.displayMessage("Bye! have a nice day!");
+
+// say message
+robot.say("Bye! have a nice day!");
+
+// Go back to home
+robot.goTo("home");
+
+
+
+
+
+
+
+
+
