@@ -16,10 +16,10 @@ robot.say("Hello, my name is Loggerhead.");
 waitForDuration(2);
 
 // say message
-robot.say("What's your favorite color?");
+robot.say("What's your favorite team?");
 
 // Ask a question
-item = robot.askMultipleChoice('What\'s your favorite color?', ['Indigo', 'Jade']);
+item = robot.askMultipleChoice('What\'s your favorite team?', ['Seahawks', 'Mariners']);
 
 // Display a message by adding two strings together
 robot.displayMessage(String('You Selected ') + String(item));
@@ -31,10 +31,10 @@ robot.say(String('You Selected ') + String(item));
 waitForDuration(2);
 
 // Display a message
-robot.displayMessage("Bye!");
+robot.displayMessage("See you tomorrow!");
 
 // say message
-robot.say("Bye!");
+robot.say("See you tomorrow!");
 
 // Go back to home
 robot.goTo("home");
