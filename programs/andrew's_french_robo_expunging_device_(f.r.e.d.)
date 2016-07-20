@@ -1,0 +1,102 @@
+robot.displayMessage('こんにちは！');
+robot.say("Hello!")
+waitForDuration(2);
+
+robot.displayMessage('私の名前は', 'フランス語ロボ抹消デバイスです。');
+robot.say("My name is French Robo Expunging Device.");
+waitForDuration(4);
+
+robot.displayMessage('あなたは私を略して', 'フレッドを呼び出すことができます。');
+robot.say("You can call me Fred for short.");
+waitForDuration(4);
+
+robot.say("Where do you want me to expunge?");
+item = robot.askMultipleChoice('どこ私を作りますか。', ['Table', 'Whiteboard', 'Floor']);
+
+robot.displayMessage(String('選択しました。') + String(item));
+robot.say(String('You Selected ') + String(item));
+waitForDuration(3);
+
+if(item == 'Table') {
+  
+  robot.displayMessage('Going to table.');
+  robot.goTo("table")
+  robot.displayMessage('Arrived at table.');
+  
+  for(i = 0; i < 2; i++) {
+    
+	robot.displayMessage('Moving right ' + String(i));
+    robot.moveRight();
+    
+	robot.displayMessage('Moving left ' + String(i));
+    robot.moveLeft();
+    
+	robot.displayMessage('Moving forward '  + String(i));
+    robot.moveForward();
+
+	robot.displayMessage('Moving left ' + String(i));
+    robot.moveLeft();
+    
+	robot.displayMessage('Moving right ' + String(i));
+    robot.moveRight();
+    
+	robot.displayMessage('Moving back ' + String(i));
+    robot.moveBack();
+      
+  }
+  
+  robot.displayMessage('テーブルの削除')
+  robot.say("Table Expunged");
+  waitForDuration(2);
+  
+} 
+
+else if (item == 'Whiteboard') {
+  
+  robot.displayMessage('Going to whiteboard.');
+  robot.goTo("whiteboard");
+  robot.displayMessage('Going to whiteboard.');
+  
+  for(i = 0; i < 8; i++) {
+    
+  	robot.displayMessage('Moing forward ' + String(i));
+    robot.moveForward();
+    waitForDuration(0.5);
+    
+  	robot.displayMessage('Moing back ' + String(i));
+    robot.moveBack();
+    waitForDuration(0.5);
+    
+  }
+  
+  robot.displayMessage('ホワイト ボードの消去');
+  robot.say("Whiteboard Expunged");
+  waitForDuration(2);
+} 
+
+else if (item == 'Floor') {
+  
+  robot.displayMessage('Going to floor');
+  robot.goTo("floor");
+  robot.displayMessage('Arrived at floor');
+  
+  for(i = 0; i < 10; i++) {
+    
+  	robot.displayMessage('Turning right ' + String(i));
+    robot.turnRight();
+    
+  }
+  
+  robot.displayMessage('床抹消')
+  robot.say("Floor Expunged");
+  waitForDuration(2);
+  
+}
+
+robot.displayMessage('Going to home');
+robot.goTo("home");
+robot.displayMessage('Arrived at home');
+
+robot.displayMessage('失礼します。');
+robot.say("Bye.");
+waitForDuration(2);

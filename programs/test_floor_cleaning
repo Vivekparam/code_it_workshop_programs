@@ -1,0 +1,14 @@
+  robot.displayMessage('Going to floor');
+  robot.goTo("floor");
+  robot.displayMessage('Arrived at floor');
+  
+  for(i = 0; i < 9; i++) {
+  	robot.displayMessage('Turning right ' + String(i));
+    robot.turnRight(0.8);
+  }
+
+  for(i = 0; i < 3; i++) {
+    
+  	robot.displayMessage('Moving forward ' + String(i));
+    robot.moveForward(0.15);
+  }

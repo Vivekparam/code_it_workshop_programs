@@ -1,56 +1,85 @@
-/**
- *COPY THIS FILE BEFORE EDITING IT 
- **/
-
-// go to couch_east
-robot.goTo("table_northeast");   // other places: door,  home, trash, couch_west, vivek_desk,
-							// table_northwest, table_northeast, table_southwest, table_southeast
-
-// display message
-robot.displayMessage('Hello!', 'My Name is LoggerHead.');
-
-// say message
-robot.say("Hello, my name is Loggerhead.");
-
-// wait for two seconds
-waitForDuration(2);
-
-// say message
-robot.say("What's your favorite color?");
-
-// Ask a question
-item = robot.askMultipleChoice('What\'s your favorite color?', ['Indigo', 'Jade']);
-
-// Display a message by adding two strings together
-robot.displayMessage(String('You Selected ') + String(item));
-
-// say message
-robot.say(String('You Selected ') + String(item));
-
-// wait for one second
-waitForDuration(2);
-
 // Display a message
-robot.displayMessage("Bye!");
+robot.displayMessage('What up guys!, my name is Ultravax');
 
 // say message
-robot.say("Bye!");
+robot.say('What up guys!, my name is Ultravax');
+                     
+ //wait for five seconds
+waitForDuration(5);                     
 
-// Go back to home
-robot.goTo("home");
+//Display Message
+robot.displayMessage('I\'m your nurse for today');
+                                              
+//say message
+robot.say('I\'m your nurse for today');   
 
-//Display a message
-robot.displayMessage("What up guys!");
+                     
+//wait for five seconds
+waitForDuration(5);                     
 
+// Display Message
+robot.displayMessage('I\'ll prescribe laughing gas'); 
+
+// say message
+robot.say('I\'ll prescribe laughing gas');
+
+//wait for five seconds
+waitForDuration(5);   
+
+//Display Message
+robot.displayMessage( 'The best stuff on earth since I was born');
+
+// say message
+robot.say('The best stuff on earth since I was born');
+                     
 //wait for five seconds
 waitForDuration(5);
 
 //Display Message
-robot.
+robot.displayMessage('That was a joke');
+           
+// say message
+robot.say('That was a joke');
+                     
+//wait five seconds
+waitForDuration(5);
+
+//Display Message
+robot.displayMessage('Just kidding')
+                     
+//say message
+robot.say('Just kidding');
+                     
+//go To vivek_desk
+robot.goTo("vivek_desk"); 
+                     
+//Display message
+robot.displayMessage('What\'cha lookin\' at');
+
+// say message
+robot.say('Watch\'cha lookin\'at');
+
+//Display message
+robot.displayMessage('Huh');
+
+// say message
+robot.say('Huh');
+
+//wait five seconds
+waitForDuration(5);
+
+//Display Message
+robot.displayMessage('It\'s not my job to give Laszlo\'s medication');
+
+// say message
+robot.say('It\'s not my job to give Laszlo\'s medication');
+
+//wait five seconds
+waitForDuration(5);
 
 
+//Display Message
+robot.displayMessage('It\'s your job, son');
 
-
-
-
-
+// say message
+robot.say('It\'s your job, son');jb

@@ -1,0 +1,73 @@
+//SOUND TEST AREA
+
+
+
+//BEGINNING SEQUENCE
+robot.displayMessage('','Hello! My name is Lærer!');
+robot.say("Hello! My name is Lahrer!");
+waitForDuration(4);
+robot.displayMessage('','Please select your level of Norwegian. If you do not know, start from The Basics.');
+robot.say("Please select your level of Norwegian. If you do not know, start from the basics.");
+waitForDuration(6);
+
+//ASKS LEVEL ASKS LEVEL ASKS LEVEL ASKS LEVEL ASKS LEVEL ASKS LEVEL ASKS LEVEL ASKS LEVEL
+level_select = robot.askMultipleChoice('Level select', ['The Basics','Objects','Object Quiz','Sentences']);
+
+//THE BASICS
+if (level_select == 'The Basics') {
+  robot.say("You have chosen the basics. Let us begin");
+  robot.displayMessage('','You have chosen the basics. Let us begin.');
+  waitForDuration(4);
+  
+  //TABLE SEQUENCE, under BASICS
+  robot.say("Let's head over to the table.");
+  robot.displayMessage('','Lets head over to the table');
+  waitForDuration(1);
+  robot.goTo('table_southeast');
+  waitForDuration(4);
+  //nå jeg vil leiser i Engelsk, men snakker i Norsk.
+  robot.displayMessage('','Now, I will read in English and Norwegian, but speak in Norwegian. Nå jeg vil leiser i Engelsk, men snakker i Norsk');
+  robot.say('nawh yiay vil leser e engelsk og norshk, men snawkker e norshk')
+  waitForDuration(7);
+  //Dette hjelper deg å uttale det.
+  robot.displayMessage('','This helps you pronounce it. Dette hjelper deg å uttale det');
+  robot.say("Detah hyelper die oh ootal'eah deh");
+  waitForDuration(4);
+ 
+  robot.say("Let's talk about the pronunciation");
+  robot.displayMessage('Pronunciation, uttale');
+  waitForDuration(3);
+  
+  //PRONUNCIATION, under BASICS
+  robot.displayMessage('Å, å');
+  robot.say("This character makes an oh noise, like when you are surprised.");
+  waitForDuration(5);
+  robot.displayMessage('Æ , æ');
+  robot.say("These make a noise like the a in cat.");
+  waitForDuration(5);
+  robot.displayMessage('Ø, ø');
+  robot.say("This sound is not in English and is very hard for robots to make, but is pronounced like oooh");
+  waitForDuration(7);
+  
+  //WORDS and QUIZ, under BASICS
+  robot.displayMessage('','Now for some basic words, followed by a quiz. Nå for noen grunnleggende ord, etterfoolt av en quiz');
+  robot.say("nawh for noen groonleggendeh ord, etterfuwlt av en quiz");
+  waitForDuration(6);
+  
+  robot.displayMessage('Hva');
+  robot.say("This is pronounced vah. It means what");
+  waitForDuration(5);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+

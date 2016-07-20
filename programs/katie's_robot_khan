@@ -1,0 +1,108 @@
+
+// go to couch_east
+robot.goTo("table_southeast");  // other places: door,  home, trash, couch_west, vivek_desk,
+							// table_northwest, table_northeast, table_southwest, table_southeast
+
+// display and say message, wait
+robot.displayMessage('Hello!', 'My Name is Khan.');
+robot.say("Hello, my name is Khan.");
+waitForDuration(2);
+
+// Ask a question
+robot.say("How are you?");
+answer = robot.askMultipleChoice('How are you?', ['good', 'bad']);
+
+// Respond to question
+if (answer == 'good') {
+  robot.say("that's great!")
+  robot.displayMessage (' :D ','');
+  
+} else if (answer == 'bad') {
+  robot.say("I'm sorry")
+  robot.displayMessage (' ;( ','');
+}
+// wait for five seconds
+waitForDuration(2);
+
+// display and say message, wait
+robot.displayMessage('Alright, Time to get started!');
+robot.say ("Alright, Time to get started!'");
+waitForDuration(3);
+
+// display and say message, wait
+robot.displayMessage('I hope you like Math!');
+robot.say ("I hope you like Math!");
+waitForDuration(3);
+
+// display and say message, wait
+robot.say ("First, Take your worksheet from the bin and press okay.");
+robot.askMultipleChoice('First, Take your worksheet from the bin and press okay.',['Okay']);
+waitForDuration(1);
+
+// display and say message, wait
+robot.say ("Please place all distractions, phones included, in the bin, I will give them back to you later");
+robot.askMultipleChoice('Please place all distractions in the bin and press okay.',['Okay']);
+waitForDuration(3);
+
+// display and say message, wait
+robot.displayMessage('Please try problem one...');
+robot.say ("Please try problem one");
+waitForDuration(2);
+
+// Ask a question, the question should time out one minute later
+robot.say ("What is 5 times 5 plus 20? you have 1 minute, I will walk you through it after, if you need me to do so.");
+answer = robot.askMultipleChoice('(5*5)+20 = ? you have 1 minute to answer', ['45', '10', 'I am unsure'], 60);
+
+if (answer == '45') {
+  	robot.say("that's correct! good job!");
+	robot.displayMessage('good job!')
+} else if (answer == '10') {
+  	robot.say("that's incorrect... 5 times 5 is 25, 25 plus 20 is 45")
+	robot.displayMessage ('that is incorrect...','5*5 is 25, 25+20 is 45');
+}
+
+// wait for 3 seconds
+waitForDuration(3);
+
+// display and say message, wait
+robot.displayMessage('Please try problem two...');
+robot.say ("Please try problem two");
+waitForDuration(3);
+
+// Ask a question, multiple choice should timeout after 60 seconds
+robot.say ("you have 1 minute. I will walk you through it after if you need me to do so.");
+answer = robot.askMultipleChoice('(((7*7)*2)+10) = ? you have 1 minute to answer', ['108', '189', 'I am unsure'], 60);
+
+// display and say message, wait
+robot.displayMessage('I notice you did not answer...');
+robot.say("I notice you did not answer...")
+waitForDuration(3)
+
+// display and say message, wait
+robot.displayMessage('Let me tell you how to do it then...');
+robot.say("Let me tell you how to do it then...")
+waitForDuration(4)
+
+// display and say message, wait
+robot.say("7 times 7 is 49 , 49 times 2 is 98 , 98 plus 10 is 108.")
+robot.displayMessage('7*7 is 49, 49*2 is 98, 98+10 is 108, therefore the answer is 108');
+waitForDuration(12)
+
+// display and say message, wait
+robot.displayMessage('Alright, it looks like you are done, good job!!');
+robot.say("Alright, it looks like you are done, good job!!")
+waitForDuration(5)
+
+// display and say message, wait
+robot.say ("Please grab your belongings from the bin");
+robot.askMultipleChoice('Please grab your belongings from the bin and press okay.',['Okay']);
+waitForDuration(1);
+
+// display and say message, wait
+robot.displayMessage('Anyway, have a nice day! Bye!');
+robot.say("Anyway, have a nice day! Bye!")
+waitForDuration(4)
+
+// Leave the study area
+robot.goTo("home");
+

@@ -1,0 +1,5 @@
+// display and say message, wait
+
+robot.say ("Please try problem two");
+waitForDuration(3);
+robot.displayMessage('Please try problem two...');

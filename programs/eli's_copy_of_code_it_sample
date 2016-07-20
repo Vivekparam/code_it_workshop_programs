@@ -7,7 +7,7 @@ robot.goTo("table_northeast");   // other places: door,  home, trash, couch_west
 							// table_northwest, table_northeast, table_southwest, table_southeast
 
 // display message
-robot.displayMessage('Hello!', 'My Name is LoggerHead.');
+robot.displayMessage('Hello!', 'My Name is Loggerhead.');
 
 // say message
 robot.say("Hello, my name is Loggerhead.");
@@ -16,10 +16,10 @@ robot.say("Hello, my name is Loggerhead.");
 waitForDuration(2);
 
 // say message
-robot.say("What's your favorite team?");
+robot.say("Who was the second pick in the 2003 NBA draft?");
 
 // Ask a question
-item = robot.askMultipleChoice('What\'s your favorite team?', ['Seahawks', 'Mariners']);
+item = robot.askMultipleChoice('Who\ was the second pick in the 2003 NBA draft?', ['Darko Milicic', 'Lebron James']);
 
 // Display a message by adding two strings together
 robot.displayMessage(String('You Selected ') + String(item));

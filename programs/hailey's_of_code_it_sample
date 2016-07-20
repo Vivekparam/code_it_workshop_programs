@@ -1,54 +1,89 @@
+
 /**
  *COPY THIS FILE BEFORE EDITING IT 
  **/
 
-// go to couch_east
-robot.goTo("table_northeast");   // other places: door,  home, trash, couch_west, vivek_desk,
-							// table_northwest, table_northeast, table_southwest, table_southeast
+// Start at home
+robot.goTo("home");
 
-// display message
-robot.displayMessage('Hello!', 'My Name is LoggerHead.I like to meet new people.');
-
-// say message
-robot.say("Hello, my name is Loggerhead. I like to meet new people.");
-
-// wait for two seconds
+// display and say message, then wait
+robot.displayMessage('Hello!, my name is Walker.', '');
+robot.say("Hello, my name is walker.");
 waitForDuration(2);
 
-// say message
-robot.say("What's your favorite color? Mine is green.");
+// Ask the person to attach the dog
+robot.say("I need you to put the leash on your dog. Press okay when the leash is on your dog.");
+robot.askMultipleChoice('Press okay when the leash is on your dog.', ['Okay']);
+waitForDuration(2);
 
-// Ask a question
-item = robot.askMultipleChoice('What's your favorite color? Mine is green.', ['pink', 'blue','red','green']);
+// Ask question
+robot.say("I can walk your dog as long as you want me to. How long would you like me to walk your dog?");
+duration = robot.askMultipleChoice('How long should I walk your dog?',['5 minutes', '10 minutes', '15 minutes']);
+waitForDuration(2);
 
-// Display a message by adding two strings together
-robot.displayMessage(String('You Selected ') + String(item));
-
-// say message
-robot.say(String('You Selected ') + String(item));
-
-// wait for one second
-waitForDuration(2)
-
-// Display a message by adding two strings together
-robot.displayMessage(String("I hope you have a great and wonderful time at Do-It")
+robot.displayMessage('We are on a walk.', 'Going to the trash.');
+  
+// go to location 1
+robot.goTo("trash");
 
 // say message
-robot.say("i hope you have a great and wonderful time at Do-It")
+robot.say("sit");
 
-// wait for one second
-waitForDuration(2)
-
-// Display a message
-robot.displayMessage("Bye! have a nice day!");
+//wait for thirty seconds
+waitForDuration(8);
 
 // say message
-robot.say("Bye! have a nice day!");
+robot.say("good job");
+
+//wait for ten seconds
+waitForDuration(5);
+
+
+// If long walk, go to location 2
+
+if (duration == '10 minutes'){
+	
+ 	robot.displayMessage('We are on a walk.', 'Going to outside.');
+ 
+  	// go to table_southwest
+	robot.goTo ("outside");
+
+	// say message
+	robot.say("lay down");
+
+	//wait for fourtyfive seconds
+	waitForDuration(8);
+
+  	//say message
+	robot.say("good boy");
+
+  	//wait for ten seconds
+	waitForDuration(5);
+
+}
+
+if (duration == '15 minutes'){
+
+ 	robot.displayMessage('We are on a walk.', 'Going to Vivek desk.');
+ 
+  	// go to table_southwest
+	robot.goTo ("vivek_desk");
+}
+
+robot.displayMessage('Okay lets go back now.', '');
+robot.displayMessage('Okay lets go back now.', 'Going home.');
+waitForDuration(2);
 
 // Go back to home
 robot.goTo("home");
 
+//say message
+robot.say("Thank you for letting me walk your dog! can you take the leash off your dog?");
+robot.askMultipleChoice('Press okay when the leash is off.', ['Okay']);
+waitForDuration(2);
 
+//say message
+robot.say( "come get me when your dog is ready for his walk later.");
 
 
 

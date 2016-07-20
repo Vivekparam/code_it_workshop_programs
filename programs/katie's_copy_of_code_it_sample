@@ -2,17 +2,8 @@
  *COPY THIS FILE BEFORE EDITING IT 
  **/
 
-// go to couch_east
-robot.goTo("table_northeast");   // other places: door,  home, trash, couch_west, vivek_desk,
-							// table_northwest, table_northeast, table_southwest, table_southeast
 
-// display message
-robot.displayMessage('Hello!', 'My Name is LoggerHead.');
-
-// say message
-robot.say("Hello, my name is Loggerhead.");
-
-// wait for two seconds
+// wait for one second
 waitForDuration(2);
 
 // say message

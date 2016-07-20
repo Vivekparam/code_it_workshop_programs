@@ -1,2 +1,6 @@
 //say This is a test to see if it can say special characters
 robot.say("værer rød grød med fløde");
+waitForDuration(2)
+robot.say("smøbrød ø ø ø å å å å å åland åland åland æ æ æ æ æ æ lærer lærer lærer");
+waitForDuration(3)
+robot.say("אני אוחלת לחם");
